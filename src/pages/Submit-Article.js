@@ -1,5 +1,5 @@
 import React from "react";
-import SubmissionForm from "/Users/zahra/Desktop/cise_ass1a_worksheet4/frontend/src/components/SubmissionForm.js";
+import SubmissionForm from "../components/SubmissionForm.js";
 
 const SubmitArticle = () =>  {
      return (
