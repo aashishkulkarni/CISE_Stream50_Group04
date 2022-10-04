@@ -6,7 +6,6 @@ const SEPractices = [
     {
       id: 2,
       practice: 'Mob programming',
-    },
-   
+    }
   ];
   export default SEPractices;

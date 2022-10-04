@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 const Styles = styled.div `
   table {
+    background-color:'red'
     width: 100%;
     border-spacing: 0;
     border: 1px solid black;
