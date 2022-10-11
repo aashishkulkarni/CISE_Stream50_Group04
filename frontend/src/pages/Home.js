@@ -8,7 +8,6 @@ const Home = () => {
         style={{ alignItems: "center", justifyContent: "center" }}
         alt="SPEED_logo"
         sx={{ width: 50, height: 50, p: 3, m: 3 }}
-
       ></img>
       <h1> What is SPEED ?</h1>
       <h2> Introduction </h2>
@@ -22,8 +21,11 @@ const Home = () => {
       <ul>Step 1: Click on 'Submit Article' tab </ul>
       <ul>Step 2: Fill out the details regarding the article</ul>
       <ul>Step 3: Wait for the moderator to review the article </ul>
-      <ul>Step 4: If the moderator accepts the article, then check if it is there in the 'Select the Practice' tab </ul>
+      <ul>Step 4: If the moderator accepts the article, then check if it is visible in the 'Select the Practice' tab </ul>
 
+      <h2> Role of Moderator </h2>
+      <p> The moderator will evaluate the articles submitted by the user. After evaluation, the moderator may either accept or decline the article</p>
+      <p> The published article will be visible in the 'Select the Practice' tab </p>
     </div >
   );
 }
