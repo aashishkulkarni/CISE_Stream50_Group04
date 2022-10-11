@@ -3,8 +3,8 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <h2> How to use SPEED</h2>
-      <p>I am not sure what to put on the home page</p>
+      <h1> What is SPEED ?</h1>
+      <h3><u> Introduction </u></h3>
       <p>A nice logo? Instructions?</p>
     </div>
   );
