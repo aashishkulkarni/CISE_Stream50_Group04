@@ -9,16 +9,17 @@ const SubmissionForm = () => {
     const url = 'http://localhost:8080/article/submitArticle'
     // const urlArticleAcount = 'http://localhost:8080/article/articleCount'
 
-    axios.post(url, {
-      ...data
-    })
-      .then((response) => {
-        alert(response.data)
-      })
-      .catch((error) => {
-        alert(error.data)
-      })
 
+    // axios.post(url, {
+    //   ...data
+    // })
+    //   .then((response) => {
+    //     alert(response.data)
+    //   })
+    //   .catch((error) => {
+    //     alert(error.data)
+    //   })
+   
 
   }
   return (
@@ -33,12 +34,13 @@ const SubmissionForm = () => {
       <select {...register("sepractice")}>
         <option value="">Select SE practice...</option>
         <option value="TDD">TDD</option>
-        <option value="Mob Programming">Mob Programmin</option>
+        <option value="Mob Programming">Mob Programming</option>
       </select>
 
       <p>{result}</p>
       <input type="submit" />
     </form>
+    
   );
 }
 export default SubmissionForm;
