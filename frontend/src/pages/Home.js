@@ -13,7 +13,7 @@ const Home = () => {
       <h2> Introduction </h2>
       <p sx={{ fontSize: ' 40' }}> SPEED is a website which shows the various articles submitted by the user. These articles are then verified by the moderators who either accept or reject the article.
         'React.js' has been used for designing the front-end aspects of the website
-        'Node.js' is implemented to handle the back-end aspects and 'MongoDB' has been used to handle the database.
+        'Node.js' is implemented to handle the back-end aspects and 'MongoDB' has been used to store article details in the database.
       </p>
       <h2> Purpose </h2>
       <p>It is a searchable database of evidence about different claims about different SE practices.</p>
