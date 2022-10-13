@@ -19,7 +19,7 @@ const App = () => {
           <li><NavLink to="/SEPractice">Select the Practice</NavLink></li>
           <li><NavLink to="/SubmitArticle">Submit an Article</NavLink></li>
         </ul>
-        <div className="content">
+        <div data-testid="button" className="content">
           <Route exact path="/" component={Home} />
           <Route path="/SEPractice" component={(SEPractice)} />
           <Route path="/SubmitArticle" component={SubmitArticle} />
