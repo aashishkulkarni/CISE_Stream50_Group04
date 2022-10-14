@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../logo/SPEED_logo.png";
+import Button from '@mui/material/Button';
 const Home = () => {
   return (
     <div>
@@ -26,6 +27,8 @@ const Home = () => {
       <h2> Role of Moderator </h2>
       <p> The moderator will evaluate the articles submitted by the user. After evaluation, the moderator may either accept or decline the article</p>
       <p> The published article will be visible in the 'Select the Practice' tab </p>
+
+      <Button data-testid="button" className="button-styled" variant="contained" margin="normal" sx={{ my: 2 }} > Like Button</Button>
     </div >
   );
 }
