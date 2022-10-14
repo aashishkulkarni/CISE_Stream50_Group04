@@ -28,7 +28,7 @@ const Home = () => {
       <p> The moderator will evaluate the articles submitted by the user. After evaluation, the moderator may either accept or decline the article</p>
       <p> The published article will be visible in the 'Select the Practice' tab </p>
 
-      <Button data-testid="button" className="button-styled" variant="contained" margin="normal" sx={{ my: 2 }} > Like Button</Button>
+      <Button label="Hello" data-testid="button" className="button-styled" variant="contained" margin="normal" sx={{ my: 2 }} > Like Button</Button>
     </div >
   );
 }
