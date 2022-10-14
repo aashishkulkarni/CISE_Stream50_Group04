@@ -1,14 +1,9 @@
 import React from "react";
-import Logo from "../logo/SPEED_logo.png";
+
 const Home = () => {
   return (
     <div>
-      <img
-        src={Logo}
-        style={{ alignItems: "center", justifyContent: "center" }}
-        alt="SPEED_logo"
-        sx={{ width: 50, height: 50, p: 3, m: 3 }}
-      ></img>
+
       <h1> What is SPEED ?</h1>
       <h2> Introduction </h2>
       <p sx={{ fontSize: ' 40' }}> SPEED is a website which shows the various articles submitted by the user. These articles are then verified by the moderators who either accept or reject the article.
