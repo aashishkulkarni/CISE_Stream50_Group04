@@ -3,7 +3,7 @@ import {
   Route,
   NavLink,
   BrowserRouter as Router,
-  Redirect,
+  Redirect
 } from "react-router-dom";
 import Home from "./pages/Home";
 import SEPractice from "./pages/SE-Practice";
@@ -16,32 +16,22 @@ const App = () => {
       <div>
         <h1>Software Practice Empirical Evidence Database (SPEED)</h1>
         <ul className="header">
-          <li>
-            <NavLink exact to="/">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/SEPractice">Select the Practice</NavLink>
-          </li>
-          <li>
-            <NavLink to="/SubmitArticle">Submit an Article</NavLink>
-          </li>
-          <li>
-            <NavLink to="/Moderator">Moderator</NavLink>
-          </li>
+          <li><NavLink exact to="/">Home</NavLink></li>
+          <li><NavLink to="/SEPractice">Select the Practice</NavLink></li>
+          <li><NavLink to="/SubmitArticle">Submit an Article</NavLink></li>
+          <li><NavLink to="/moderator">Moderator </NavLink></li>
         </ul>
         <div className="content">
           <Route exact path="/" component={Home} />
-          <Route path="/SEPractice" component={SEPractice} />
+          <Route path="/SEPractice" component={(SEPractice)} />
           <Route path="/SubmitArticle" component={SubmitArticle} />
+          <Route path="/moderator" component={Moderator} />
           <Route exact path="/404" component={NotFoundPage} />
-          <Route exact path="/Moderator" component={Moderator} />
-          <Redirect to="/" />
+          <Redirect to="/404" />
         </div>
       </div>
     </Router>
   );
-};
+}
 
 export default App;

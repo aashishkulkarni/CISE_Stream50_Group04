@@ -20,7 +20,7 @@ import {
   FormControlLabel,
   Switch,
 } from "@mui/material";
-//import SearchBar from "material-ui-search-bar";
+import SearchBar from "material-ui-search-bar";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
@@ -188,11 +188,11 @@ export default (props) => {
         >
           <Dropdown />
           <h2>Select SE Practice to get evidence for the claimed benefits</h2>
-          {/* <SearchBar
+          <SearchBar
             value={searched}
             onChange={(searchVal) => requestSearch(searchVal)}
             onCancelSearch={() => cancelSearch()}
-          /> */}
+          />
         </div>
 
         {/* <EnhancedTableToolbar numSelected={selected.length} /> */}

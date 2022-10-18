@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const article = require('./../model/article')
 
 
@@ -62,9 +63,7 @@ const addOnceData = () => {
     })
 }
 const getAllArticle = (req, res) => {
-
-  console.log("hello")
-  article.find({})
+  article.find({ status: 'accepted' })
     .then((data) => {
       res.json(data)
     })
@@ -73,7 +72,6 @@ const getAllArticle = (req, res) => {
 const submitArticle = (req, res) => {
 
   const data = req.body
-
   article.create(data)
     .then((data) => {
       console.log("Add article has been successfully")
@@ -83,8 +81,74 @@ const submitArticle = (req, res) => {
       res.json("There is Error in article submitting")
     })
 }
+
+const getAllPendingArticles = (req, res) => {
+
+  // get all articles with pending status 
+  article.find({ status: 'pending' })
+    .then((data) => {
+      res.json(data)
+    })
+    .catch((error) => {
+      // if there is any error 
+      res.status(500).json({
+        message: error.message,
+        type: "Can't update this"
+      })
+    })
+}
+const acceptArticle = (req, res) => {
+  // take id from the front-end 
+  const { id } = req.params
+  // convert the id from string to objectId mongoose 
+  var _id = ObjectId(id)
+
+  // update the article that we send it's id from pending status to accepted status
+  article.update({ _id },
+    { status: "accepted" })
+    .then((response) => {
+      res.status(200).json(response)
+    })
+    .catch((error) => {
+      // if there is any error 
+      res.status(500).json({
+        message: error.message,
+        type: "Can't update this"
+      });
+    })
+}
+
+
+// function reject article
+const rejectArticle = (req, res) => {
+
+  // take id from the front-end 
+  const { id } = req.params
+  // convert the id from string to objectId mongoose 
+  var _id = ObjectId(id)
+
+  // update the article that we send it's id from pending status to reject status
+  article.update({ _id },
+    { status: "rejected" })
+    .then((response) => {
+      res.status(200).json(response)
+    })
+    .catch((error) => {
+      // if there is any error 
+      res.status(500).json({
+        message: error.message,
+        type: "Can't update this"
+      });
+    })
+}
+
+
+
 module.exports = {
   getAllArticle,
   submitArticle,
-  addOnceData
+  addOnceData,
+  getAllPendingArticles,
+  acceptArticle,
+  rejectArticle
 }
