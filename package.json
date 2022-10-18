@@ -9,12 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zahra-ally/CISE_Stream50_Group04.git"
+    "url": "git+https://github.com/aashkul/CISE_Stream50_Group04.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zahra-ally/CISE_Stream50_Group04/issues"
+    "url": "https://github.com/aashkul/CISE_Stream50_Group04/issues"
   },
-  "homepage": "https://github.com/Zahra-ally/CISE_Stream50_Group04#readme"
+  "homepage": "https://github.com/aashkul/CISE_Stream50_Group04#readme",
+  "dependencies": {
+    "@testing-library/react": "^13.4.0"
+  }
 }
