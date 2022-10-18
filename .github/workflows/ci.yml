@@ -1,4 +1,5 @@
 name: CI_action
+
 on:
   push:
     branches: 
@@ -6,6 +7,7 @@ on:
 
 env:
   MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
+  CI: true
 
 jobs:
   build:
@@ -22,6 +24,7 @@ jobs:
         node-version: '14'
     - name: Install dependencies
       run: npm install
+
     - name: Run the tests
       run: npm test
 
