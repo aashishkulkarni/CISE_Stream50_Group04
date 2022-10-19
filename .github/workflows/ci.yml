@@ -23,10 +23,10 @@ jobs:
       with:
         node-version: '14'
     - name: Install dependencies
-      run: cd frontend && npm install
-
+      run:  npm install
     - name: Run the tests
-      run: cd frontend && npm test
+      run:  npm test
+    - name: Build
+      run: npm run build
 
- 
-   
+
