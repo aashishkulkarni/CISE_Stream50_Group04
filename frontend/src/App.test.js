@@ -1,4 +1,4 @@
-import { Experimental_CssVarsProvider } from '@mui/material';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';

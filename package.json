@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Zahra-ally/CISE_Stream50_Group04/issues"
   },
-  "homepage": "https://github.com/Zahra-ally/CISE_Stream50_Group04#readme"
+  "homepage": "https://github.com/Zahra-ally/CISE_Stream50_Group04#readme",
+  "dependencies": {
+    "@mui/material": "^5.10.10",
+    "@mui/styled-engine-sc": "^5.10.6",
+    "styled-components": "^5.3.6"
+  }
 }
