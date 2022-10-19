@@ -11,11 +11,12 @@ beforeAll(() => {
     // Connect to the MongoDB cluster
     mongoose.connect(
         url,
-        { useNewUrlParser: true, useUnifiedTopology: true },
-        () => console.log(" Mongoose is connected")
+        { useNewUrlParser: true, useUnifiedTopology: true }
     );
 
 })
+
+// 
 
 afterAll(() => {
     server.close();
