@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { alpha } from "@mui/material/styles";
+import IconButton from '@material-ui/core/IconButton';
 import {
   Box,
   Table,
