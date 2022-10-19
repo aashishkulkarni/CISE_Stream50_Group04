@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getAllArticle, submitArticle } = require("./../controller/articleController");
+const { getAllArticle, submitArticle, getAllPendingArticles, acceptArticle, rejectArticle } = require("./../controller/articleController");
 
 
 router
@@ -8,9 +8,12 @@ router
 router
   .post('/submitArticle', submitArticle)
 
+router
+  .get('/getAllPendingArticles', getAllPendingArticles)
+router
+  .get('/acceptArticle/:id', acceptArticle)
 
-
-
-
+router
+  .get('/rejectArticle/:id', rejectArticle)
 
 module.exports = router;

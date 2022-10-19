@@ -8,6 +8,10 @@ const article = new mongoose.Schema({
   doi: String,
   claim: String,
   evidence: String,
+  status: {
+    type: String,
+    default: 'pending'
+  }
 });
 
 const artickeMode = mongoose.model("article", article);
