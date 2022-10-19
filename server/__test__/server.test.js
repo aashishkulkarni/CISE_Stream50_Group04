@@ -2,7 +2,6 @@
 const request = require('supertest');
 const articleRouter = require('../router/articleRouter');
 const mongoose = require('mongoose');
-
 const server = require('../server');
 
 beforeAll(() => {
@@ -16,14 +15,12 @@ beforeAll(() => {
 
 })
 
-// 
-
 afterAll(() => {
     server.close();
     return mongoose.connection.close();
 });
 
 it('article', async () => {
-    const res = await request.get(articleRouter).send();
+    const res = await request.get('/router/articleRouter').send();
     expect(res.statusCode).toBe(200);
 })
