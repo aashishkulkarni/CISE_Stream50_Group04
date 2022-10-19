@@ -27,11 +27,6 @@ const SEPractice = () => {
 
   return (
     <div>
-      {/* <Styles>
-        <DataTable columns={tablecolumns}
-          data={articles}
-        />
-      </Styles> */}
       {isLoading ? (
         <h1>Loading data ....</h1>
       ) : data.length > 0 ? (
@@ -39,7 +34,9 @@ const SEPractice = () => {
           <DataTable columns={tablecolumns} data={data} />
         </Styles>
       ) : (
-        <h1>Loading data ....</h1>
+        <div class="alert alert-danger" role="alert">
+          There is no Data
+        </div>
       )}
     </div>
   );

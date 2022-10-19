@@ -10,6 +10,7 @@ import SEPractice from "./pages/SE-Practice";
 import SubmitArticle from "./pages/Submit-Article";
 import IconButton from '@material-ui/core/IconButton';
 import NotFoundPage from "./pages/404";
+import Moderator from "./pages/Moderator";
 const App = () => {
   return (
     <Router>
@@ -19,11 +20,13 @@ const App = () => {
           <li><NavLink exact to="/">Home</NavLink></li>
           <li><NavLink to="/SEPractice">Select the Practice</NavLink></li>
           <li><NavLink to="/SubmitArticle">Submit an Article</NavLink></li>
+          <li><NavLink to="/moderator">Moderator </NavLink></li>
         </ul>
         <div className="content">
           <Route exact path="/" component={Home} />
           <Route path="/SEPractice" component={(SEPractice)} />
           <Route path="/SubmitArticle" component={SubmitArticle} />
+          <Route path="/moderator" component={Moderator} />
           <Route exact path="/404" component={NotFoundPage} />
           <Redirect to="/404" />
         </div>

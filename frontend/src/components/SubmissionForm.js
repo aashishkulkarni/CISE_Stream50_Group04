@@ -1,25 +1,39 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
+import Swal from 'sweetalert2'
 const SubmissionForm = () => {
   const { register, handleSubmit } = useForm();
   const [result, setResult] = useState("");
+  const history = useHistory()
+
   const onSubmit = (data) => {
     setResult(JSON.stringify(data));
     const url = 'http://localhost:8080/article/submitArticle'
-    // const urlArticleAcount = 'http://localhost:8080/article/articleCount'
 
     axios.post(url, {
       ...data
     })
       .then((response) => {
-        alert(response.data)
+        Swal.fire(
+          'Submitting success',
+          'Submitting Article has been done successfully ',
+          'success'
+        ).then((res) => {
+          history.push('/moderator')
+        })
+
       })
       .catch((error) => {
-        alert(error.data)
+        Swal.fire(
+          'Submitting Failed!',
+          'The article submitting failed ',
+          'error'
+        ).then((res) => {
+          history.push('/moderator')
+        })
       })
-
-
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
