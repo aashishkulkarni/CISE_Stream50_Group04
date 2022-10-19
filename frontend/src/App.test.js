@@ -1,6 +1,6 @@
-import { Experimental_CssVarsProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import IconButton from '@mui/material/IconButton';
 import App from './App';
 
 it('renders without crashing', () => {

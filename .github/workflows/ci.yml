@@ -1,25 +1,32 @@
 name: CI_action
+
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: 
+    - main
+
+env:
+  MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
+  CI: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Set up Node.js ${{ matrix.node-version }}
+    # - name: Checkout repository
+    - uses: actions/checkout@v2
+    - name: Set up Node.js '14'
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '14'
     - name: Install dependencies
       run:  npm install
     - name: Run the tests
       run:  npm test
     - name: Build
       run: npm run build
+
+

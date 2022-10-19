@@ -1,0 +1,25 @@
+{
+  "name": "cise_stream50_group04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd frontend && npm test",
+    "start": "cd server && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zahra-ally/CISE_Stream50_Group04.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zahra-ally/CISE_Stream50_Group04/issues"
+  },
+  "homepage": "https://github.com/Zahra-ally/CISE_Stream50_Group04#readme",
+  "dependencies": {
+    "@mui/material": "^5.10.10",
+    "@mui/styled-engine-sc": "^5.10.6",
+    "styled-components": "^5.3.6"
+  }
+}
