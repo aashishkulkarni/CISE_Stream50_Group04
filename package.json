@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cd frontend && npm test",
+    "test": "cd server && npm test",
     "start": "cd server && node server.js"
   },
   "repository": {
