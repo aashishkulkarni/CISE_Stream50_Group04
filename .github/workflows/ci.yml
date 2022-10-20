@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: '14'
     - name: Install dependencies
-      run:  cd frontend && npm install
+      run:  cd server && npm install
     - name: Run the tests
       run:  npm test
     - name: Build
