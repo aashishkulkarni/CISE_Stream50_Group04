@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Route,
+  Switch,
   NavLink,
   BrowserRouter as Router,
   Redirect
@@ -23,12 +24,13 @@ const App = () => {
           <li><NavLink to="/moderator">Moderator </NavLink></li>
         </ul>
         <div className="content">
-          <Route exact path="/" component={Home} />
-          <Route path="/SEPractice" component={(SEPractice)} />
-          <Route path="/SubmitArticle" component={SubmitArticle} />
-          <Route path="/moderator" component={Moderator} />
-          <Route exact path="/404" component={NotFoundPage} />
-          <Redirect to="/404" />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/SEPractice" component={(SEPractice)} />
+            <Route path="/SubmitArticle" component={SubmitArticle} />
+            <Route path="/moderator" component={Moderator} />
+            <Route path="*" component={NotFoundPage} />
+          </Switch>
         </div>
       </div>
     </Router>
