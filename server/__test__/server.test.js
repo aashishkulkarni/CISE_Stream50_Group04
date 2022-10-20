@@ -1,26 +1,23 @@
-
-const request = require('supertest');
-const articleRouter = require('../router/articleRouter');
+const { server: app, database } = require('../server');
+const supertest = require("supertest");
+const request = supertest(app);
 const mongoose = require('mongoose');
-const server = require('../server');
+
 
 beforeAll(() => {
-    const url = process.env.MONGOLAB_URI
-
-    // Connect to the MongoDB cluster
-    mongoose.connect(
-        url,
-        { useNewUrlParser: true, useUnifiedTopology: true }
-    );
+    database
 
 })
 
-afterAll(() => {
-    server.close();
-    return mongoose.connection.close();
-});
 
-it('article', async () => {
-    const res = await request.get('/router/articleRouter').send();
+
+it('Test article grabbing', async () => {
+    const res = await request.get('/article/getAllArticles').send();
     expect(res.statusCode).toBe(200);
 })
+
+it('Test pending article ', async () => {
+    const res = await request.get('/article/getAllPendingArticles').send();
+    expect(res.statusCode).toBe(200);
+})
+
