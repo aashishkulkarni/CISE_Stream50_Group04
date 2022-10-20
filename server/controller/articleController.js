@@ -1,8 +1,6 @@
 const { ObjectId } = require('mongodb');
 const article = require('./../model/article')
 
-
-
 const DATA = [
   {
     title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',
